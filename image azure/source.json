@@ -1,0 +1,33 @@
+{
+    "builders": [{
+      "type": "azure-arm",
+  
+      "client_id": "a418ab71-d84e-4f09-9b1a-955ada1f22f5",
+      "client_secret": "WJ98Q~Cdu8fdlmXj2BcsQjdnv.t_xafykeUllb-e",
+      "tenant_id": "06b3cf2a-506d-4c27-94f6-24db616e3350",
+      "subscription_id": "a3d75c10-c135-4e6b-8f4e-f22711d010ef",
+  
+      "managed_image_resource_group_name": "anjiRG1",
+      "managed_image_name": "myPackerImage1",
+      
+  
+      "os_type": "Windows",
+      "image_publisher": "MicrosoftWindowsServer",
+      "image_offer": "WindowsServer",
+      "image_sku": "2016-Datacenter",
+  
+      "communicator": "winrm",
+      "winrm_use_ssl": true,
+      "winrm_insecure": true,
+      "winrm_timeout": "5m",
+      "winrm_username": "packer",
+  
+      "azure_tags": {
+          "dept": "Engineering",
+          "task": "Image deployment"
+      },
+  
+      "build_resource_group_name": "anjiRG1",
+      "vm_size": "Standard_D2_v2"
+    }]
+    }
